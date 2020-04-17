@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b8f1c6d375ab548bbf69276879ca091",
+    "revision": "a3c69e32a52b05ce8de215ddb22b44c8",
     "url": "/New-York-Times/index.html"
   },
   {
-    "revision": "6ac23a642a91434b2761",
-    "url": "/New-York-Times/static/css/main.31db2713.chunk.css"
+    "revision": "1080de76dffc1eeebb9f",
+    "url": "/New-York-Times/static/css/main.1807bae0.chunk.css"
   },
   {
-    "revision": "1a181e79e711fbf34dd0",
-    "url": "/New-York-Times/static/js/2.3d5b36bf.chunk.js"
+    "revision": "405798f7209fcd216a74",
+    "url": "/New-York-Times/static/js/2.915884b7.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/New-York-Times/static/js/2.3d5b36bf.chunk.js.LICENSE.txt"
+    "url": "/New-York-Times/static/js/2.915884b7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ac23a642a91434b2761",
-    "url": "/New-York-Times/static/js/main.643453fe.chunk.js"
+    "revision": "1080de76dffc1eeebb9f",
+    "url": "/New-York-Times/static/js/main.0b5c7f59.chunk.js"
   },
   {
     "revision": "971628bc60adc7b570ca",
