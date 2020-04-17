@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-brand img {
+    width: 219px;
+}
+
+.dashboard-nav {
+  background-color: #F3F5F6!important;
+}
+
+
+.from-icon-input{
+  padding-left: 40px;
+  border-radius: 0px !important;
+}
+
+.form-icon{
+  position: absolute;
+  padding: 10px;
+}
+
+.form-with-icon{
+  position: relative;
+  height: 100%;
+}
+
+/* <rect fill="rgba(76,162,255,1)" id="Rectangle_157" rx="26" ry="26" x="0" y="0" width="155" height="52">
+          </rect> */
+
+
+
+.side-nav{
+  width: 250px;
+  height: 100vh;
+  background-color:#F6F8F8;
+  position: fixed;
+  border-right: 1px #DEDEDE solid;
+  /* transform: translate(-100%); */
+}
+
+.side-nav ul li{
+  color: #434D71;
+  list-style-type: none;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 992px) {  
+  .from-icon-input{
+      width: 758px !important;
+      margin-left: 30px;
+  }    
+  .form-icon{
+  margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 710px) {  
+  .from-icon-input{
+      width: 600px !important;
+      margin-left: 30px;
+  }
+  .form-icon{
+      margin-left: 30px;
+      }    
+}
+
+@media only screen and (min-width: 610px) {  
+  .from-icon-input{
+      width: 500px !important;
+  }    
+}
+
+@media only screen and (max-width: 350px) {  
+  .from-icon-input{
+      width: 200px !important;
+  } 
+  .navbar-brand img {
+      width: 159px;
+  }   
+}
+
+.slidein{
+    animation: slidein 1s ease-in-out forwards;
+    -webkit-animation: slidein 1s ease-in-out forwards;
+}
+@keyframes slidein {
+    from {
+        transform: translate(-100%); 
+    }
+    
+    to {
+        transform: translate(0%);
+    }
+}
+
+.main{
+    position: relative;
+    padding: 50px;
+    margin-left: 250px;
+    margin-right: 0px;
+}
+table{
+    font-size: 15px;
+    table-layout: fixed;
+    width: 100%;
+}
+table td {
+    word-wrap: break-word;      
+    overflow-wrap: break-word;  
+    padding: 0px;
+}
+
+.result-table{
+    border: 1px solid #EFEFEF;
+    padding: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.no-result{
+    text-align: center;
+}
+
+#no-result-heading{
+    font-weight: 500;
+    font-size: 60px;
+    color: #7B8C92;
+}
