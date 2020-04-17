@@ -25,8 +25,8 @@ class Table extends React.Component{
                     {this.props.data.map(news => (
                         <tr>
                             <td>{news.pub_date.split('T')[0]}</td>
-                            <td>{news.headline.main.split(' ').slice(0,10).join(' ')}</td>
-                            <td>{news.abstract.split(' ').slice(0,10).join(' ')}</td>
+                            <td>{news.headline.main.split(' ').slice(0,10).join(' ')}...</td>
+                            <td>{news.abstract.split(' ').slice(0,10).join(' ')}...</td>
                             <td><a href={news.web_url}>{news.web_url}</a></td>
                             <td>{news.source}</td>
                         </tr>

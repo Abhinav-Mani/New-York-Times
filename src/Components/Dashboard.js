@@ -12,16 +12,23 @@ class Dashboard extends React.Component{
         key:"",
         page:0,
         data:[],
-        loading:false
+        loading:false,
+        startIndex:0
+    }
+
+    onSelectPage=(pageno)=>{
+        this.setState({...this.state,page:pageno},()=>this.fetchNews(this.state.key,this.state.page))
     }
 
     getKey=(key)=>{
-        this.setState({...this.state,key:key,page:0},()=>this.fetchNews(this.state.key,this.state.page));
+        this.setState({...this.state,key:key,page:0,loading:true},()=>this.fetchNews(this.state.key,this.state.page));
     }
 
     fetchNews=(key,page)=>{
-        this.setState({...this.state,loading:true})
         api.getnews(key,page).then(res=>this.setState({...this.state,data:res.data.response.docs,loading:false},()=>console.log(this.state.data)));
+    }
+    onPageJump=(val)=>{
+        this.setState({...this.state,startIndex:this.state.startIndex+val})
     }
 
     render(){
@@ -31,12 +38,23 @@ class Dashboard extends React.Component{
             <div className="wrapper">
                 <Sidenav />
                 <div className="main">
-                {this.state.data.length!==0?
+                {this.state.data.length!==0&&!this.state.loading?
                 (    
                     <div className="results">
                         <p>Here are your results for "{this.state.key}"</p>
                         <div className="result-table">
                             <Table data={this.state.data}/>
+                        </div>
+                        <div className="page-no">
+                        {this.state.startIndex!==0&&
+                            <span onClick={()=>this.onPageJump(-10)} > &lt;&lt; </span>
+                        }
+                        {[...Array(10).keys()].map(i=>i+this.state.startIndex).map(i=>(
+                            <span onClick={()=>{this.onSelectPage(i)}} className={i===this.state.page&&"selected"}>{i+1}</span>
+                        ))}
+                        {this.state.startIndex!==90&&
+                            <span onClick={()=>this.onPageJump(10)} > >> </span>
+                        }
                         </div>
                     </div>   
                 ):(
@@ -52,6 +70,7 @@ class Dashboard extends React.Component{
                     </div>
                 )
                 }
+                    
                 </div>
             </div>
             </>
