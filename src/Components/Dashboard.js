@@ -3,6 +3,8 @@ import React from "react";
 import NavBar from "./NavBar"
 import Sidenav from "./Sidebar"
 import Table from "./Table"
+import Chart from "./Chart"
+
 import api from "../api"
 
 import noResult from "../image/noresults.svg"
@@ -13,7 +15,8 @@ class Dashboard extends React.Component{
         page:0,
         data:[],
         loading:false,
-        startIndex:0
+        startIndex:0,
+        count:[0,0,0,0,0,0,0,0,0,0]
     }
 
     onSelectPage=(pageno)=>{
@@ -25,11 +28,34 @@ class Dashboard extends React.Component{
     }
 
     fetchNews=(key,page)=>{
-        api.getnews(key,page).then(res=>this.setState({...this.state,data:res.data.response.docs,loading:false},()=>console.log(this.state.data)));
+        api.getnews(key,page).then(res=>this.setState({...this.state,data:res.data.response.docs,loading:false},()=>console.log(this.state.data)));    
+        
+        let count =this.state.count;
+        for(let i=2011;i<=2020;i++){
+            api.getcount(key,(i*10000+101),(i*10000+1231)).then(res=>{
+                let index=i-2011;
+                let val=res.data.response.meta.hits;
+                console.log(val);
+                count[index]=val;
+                this.setState({...this.state,count:count},()=>{});
+            })
+        }
+
+        //getCount(this);
+
+        // async function getCount(){
+        //     console.log("entered")
+            
+        //     console.log("count")
+        //     console.log(count)
+        //     this.setState({...this.state,count:count});
+        // }
+        
     }
     onPageJump=(val)=>{
         this.setState({...this.state,startIndex:this.state.startIndex+val})
     }
+
 
     render(){
         return(
@@ -56,6 +82,11 @@ class Dashboard extends React.Component{
                             <span onClick={()=>this.onPageJump(10)} > >> </span>
                         }
                         </div>
+                        <div className="chart">
+                        <p>NUMBER OF ARTICLES PUBLISHED FOR " {this.state.key} "</p>
+                            <Chart count={this.state.count} />
+                        </div>
+                        
                     </div>   
                 ):(
                     
@@ -69,8 +100,7 @@ class Dashboard extends React.Component{
                         <img src={noResult} alt={"No Results"}></img>
                     </div>
                 )
-                }
-                    
+                }   
                 </div>
             </div>
             </>
