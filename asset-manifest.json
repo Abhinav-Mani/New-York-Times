@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/New-York-Times/static/css/main.e65bfe5a.chunk.css",
-    "main.js": "/New-York-Times/static/js/main.140968e4.chunk.js",
-    "main.js.map": "/New-York-Times/static/js/main.140968e4.chunk.js.map",
+    "main.js": "/New-York-Times/static/js/main.2d3b915f.chunk.js",
+    "main.js.map": "/New-York-Times/static/js/main.2d3b915f.chunk.js.map",
     "runtime-main.js": "/New-York-Times/static/js/runtime-main.4f1b0678.js",
     "runtime-main.js.map": "/New-York-Times/static/js/runtime-main.4f1b0678.js.map",
     "static/js/2.1dbf9877.chunk.js": "/New-York-Times/static/js/2.1dbf9877.chunk.js",
     "static/js/2.1dbf9877.chunk.js.map": "/New-York-Times/static/js/2.1dbf9877.chunk.js.map",
     "index.html": "/New-York-Times/index.html",
-    "precache-manifest.065379425981951172978c0f28532f6c.js": "/New-York-Times/precache-manifest.065379425981951172978c0f28532f6c.js",
+    "precache-manifest.cd1c13e561528b83825bf5449d9ffe19.js": "/New-York-Times/precache-manifest.cd1c13e561528b83825bf5449d9ffe19.js",
     "service-worker.js": "/New-York-Times/service-worker.js",
     "static/css/main.e65bfe5a.chunk.css.map": "/New-York-Times/static/css/main.e65bfe5a.chunk.css.map",
     "static/js/2.1dbf9877.chunk.js.LICENSE.txt": "/New-York-Times/static/js/2.1dbf9877.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.4f1b0678.js",
     "static/js/2.1dbf9877.chunk.js",
     "static/css/main.e65bfe5a.chunk.css",
-    "static/js/main.140968e4.chunk.js"
+    "static/js/main.2d3b915f.chunk.js"
   ]
 }
