@@ -32,7 +32,12 @@ class Chart extends React.Component{
                 <Line
                     redraw={true}
                     options={{
-                        responsive:"true",                        
+                        responsive:"true",
+                        elements: {
+                            line: {
+                                tension: 0
+                            }
+                        },                       
                         legend:{
                             display:false
                         }
